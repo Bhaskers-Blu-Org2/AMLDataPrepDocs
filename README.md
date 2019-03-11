@@ -25,6 +25,14 @@ pip install -U tornado==4.5.3
 
 ## Release Notes
 
+### 2019-03-11 (version 1.0.17)
+
+New Features
+- Now supports adding two numeric columns to generate a resultant column using the expression language.
+
+Bug fixes and improvements
+- Improved the documentation and parameter checking for random_split.
+
 ### 2019-02-27 (version 1.0.16)
 
 Bug fix
