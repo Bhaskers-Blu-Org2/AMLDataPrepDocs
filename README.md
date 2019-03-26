@@ -25,9 +25,26 @@ pip install -U tornado==4.5.3
 
 ## Release Notes
 
+### 2019-03-25 (version 1.1.0)
+
+Breaking changes
+- The concept of the Data Prep Package has been deprecated and is no longer supported. Instead of persisting multiple Dataflows in one Package, you can persist Dataflows individually.
+  - How-to guide: [Opening and Saving Dataflows notebook](https://aka.ms/aml-data-prep-open-save-dataflows-nb)
+
+New features
+- Data Prep can now recognize columns that match a particular Semantic Type, and split accordingly. The STypes currently supported include: email address, geographic coordinates (latitude & longitude), IPv4 and IPv6 addresses, US phone number, and US zip code.
+  - How-to guide: [Semantic Types notebook](https://aka.ms/aml-data-prep-semantic-types-nb)
+- Data Prep now supports the following operations to generate a resultant column from two numeric columns: subtract, multiply, divide, and modulo.
+- You can call `verify_has_data()` on a Dataflow to check whether the Dataflow would produce records if executed.
+
+Bug fixes and improvements
+- You can now specify the number of bins to use in a histogram for numeric column profiles.
+- The `read_pandas_dataframe` transform now requires the DataFrame to have string- or byte- typed column names.
+- Fixed a bug in the `fill_nulls` transform, where values were not correctly filled in if the column was missing.
+
 ### 2019-03-11 (version 1.0.17)
 
-New Features
+New features
 - Now supports adding two numeric columns to generate a resultant column using the expression language.
 
 Bug fixes and improvements
