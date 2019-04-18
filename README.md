@@ -24,7 +24,7 @@ Note: Data Prep Python SDK will no longer install `numpy` and `pandas` packages.
 
 New features
 - You can now use the Pivot transform.
-  - See how-to guide: [pivot](https://aka.ms/aml-data-prep-pivot-nb)
+  - How-to guide: [Pivot notebook](https://aka.ms/aml-data-prep-pivot-nb)
 - You can now use regular expressions in native functions.
   - Examples:
     - `dflow.filter(dprep.RegEx('pattern').is_match(dflow['column_name']))`
