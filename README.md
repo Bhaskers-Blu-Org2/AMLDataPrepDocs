@@ -6,7 +6,7 @@ You will find in this repo:
 - [Getting Started Tutorial](tutorials/getting-started/getting-started.ipynb) for a quick introduction to the Data Prep SDK and some of its main features.
 
 ## Installation
-Here are the [SDK installation steps](https://docs.microsoft.com/python/api/overview/azure/dataprep/intro?view=azure-dataprep-py#install).
+Here are the [SDK installation steps](https://aka.ms/aml-data-prep-installation).
 
 ## Documentation 
 Here is more information on how to use the new Data Prep SDK:
@@ -16,14 +16,30 @@ Here is more information on how to use the new Data Prep SDK:
 - [How to transform data](https://docs.microsoft.com/azure/machine-learning/service/how-to-transform-data) is an overview guide on how to transform data. 
 - [How to write data](https://docs.microsoft.com/azure/machine-learning/service/how-to-write-data) is an overview guide on how to write data to different storage locations. 
 
-## Known Issues
-
-- **If running version 0.1.0**: To fix "Error Message: Cannot run the event loop while another loop is running", downgrade Tornado version to 4.5.3. Restart any running kernels for the change to take effect.
-```    
-pip install -U tornado==4.5.3
-```
-
 ## Release Notes
+
+### 2019-04-22 (version 1.1.2)
+
+Note: Data Prep Python SDK will no longer install `numpy` and `pandas` packages. See [updated installation instructions](https://aka.ms/aml-data-prep-installation).
+
+New features
+- You can now use the Pivot transform.
+  - See how-to guide: [pivot](https://aka.ms/aml-data-prep-pivot-nb)
+- You can now use regular expressions in native functions.
+  - Examples:
+    - `dflow.filter(dprep.RegEx('pattern').is_match(dflow['column_name']))`
+    - `dflow.assert_value('column_name', dprep.RegEx('pattern').is_match(dprep.value))`
+- You can now use `to_upper` and `to_lower` functions in expression language.
+- You can now see the number of unique values of each column in a data profile.
+- For some of the commonly used reader steps, you can now pass in the `infer_column_types` argument. If it is set to `True`, Data Prep will attempt to detect and automatically convert column types.
+  - `inference_arguments` is now deprecated.
+- You can now call `Dataflow.shape`.
+
+Bug fixes and improvements
+- `keep_columns` now accepts an additional optional argument `validate_column_exists`, which checks if the result of `keep_columns` will contain any columns.
+- All reader steps (which read from a file) now accept an additional optional argument `verify_exists`.
+- Improved performance of reading from pandas dataframe and getting data profiles.
+- Fixed a bug where slicing a single step from a Dataflow failed with a single index.
 
 ### 2019-04-08 (version 1.1.1)
 
@@ -187,6 +203,13 @@ Bug fixes
 - Type count now is fixed to show ValueKinds mapped to single FieldType instead of individual ones
 - Write_to_csv no longer fails when path is provided as a string
 - When using Replace, leaving “find” blank will no longer fail
+
+## Known Issues
+
+- **If running version 0.1.0**: To fix "Error Message: Cannot run the event loop while another loop is running", downgrade Tornado version to 4.5.3. Restart any running kernels for the change to take effect.
+```    
+pip install -U tornado==4.5.3
+```
 
 ## Datasets License Information
 
