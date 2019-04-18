@@ -26,9 +26,9 @@ New features
 - You can now use the Pivot transform.
   - See how-to guide: [pivot](https://aka.ms/aml-data-prep-pivot-nb)
 - You can now use regular expressions in native functions.
-  - Examples:
-    - `dflow.filter(dprep.RegEx('pattern').is_match(dflow['column_name']))`
-    - `dflow.assert_value('column_name', dprep.RegEx('pattern').is_match(dprep.value))`
+  - Examples:
+    - `dflow.filter(dprep.RegEx('pattern').is_match(dflow['column_name']))`
+    - `dflow.assert_value('column_name', dprep.RegEx('pattern').is_match(dprep.value))`
 - You can now use `to_upper` and `to_lower` functions in expression language.
 - You can now see the number of unique values of each column in a data profile.
 - For some of the commonly used reader steps, you can now pass in the `infer_column_types` argument. If it is set to `True`, Data Prep will attempt to detect and automatically convert column types.
