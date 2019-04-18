@@ -18,7 +18,7 @@ Here is more information on how to use the new Data Prep SDK:
 
 ## Release Notes
 
-### 2019-04-22 (version 1.1.2)
+### 2019-04-17 (version 1.1.2)
 
 Note: Data Prep Python SDK will no longer install `numpy` and `pandas` packages. See [updated installation instructions](https://aka.ms/aml-data-prep-installation).
 
