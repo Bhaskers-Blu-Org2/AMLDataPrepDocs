@@ -18,6 +18,19 @@ Here is more information on how to use the new Data Prep SDK:
 
 ## Release Notes
 
+### 2019-05-28 (version 1.1.4)
+
+New features
+- You can now use the following expression language functions to extract and parse datetime values into new columns.
+  - `RegEx.extract_record()` extracts datetime elements into a new column.
+  - `create_datetime()` creates datetime objects from separate datetime elements.
+- When calling `get_profile()`, you can now see that quantile columns are labeled as (est.) to clearly indicate that the values are approximations.
+- You can now use ** globbing when reading from Azure Blob Storage.
+  - e.g. `dprep.read_csv(path='https://yourblob.blob.core.windows.net/yourcontainer/**/data/*.csv')`
+
+Bug fixes
+- Fixed a bug related to reading a Parquet file from a remote source (Azure Blob).
+
 ### 2019-05-08 (version 1.1.3)
 
 New features
