@@ -18,6 +18,17 @@ Here is more information on how to use the new Data Prep SDK:
 
 ## Release Notes
 
+### 2019-06-25 (version 1.1.6)
+
+New features
+- Added summary functions for top values (`SummaryFunction.TOPVALUES`) and bottom values (`SummaryFunction.BOTTOMVALUES`).
+
+Bug fixes and improvements
+- Significantly improved the performance of `read_pandas_dataframe`.
+- Fixed a bug that would cause `get_profile()` on a Dataflow pointing to binary files to fail.
+- Exposed `set_diagnostics_collection()` to allow for programmatic enabling/disabling of the telemetry collection.
+- Changed the behavior of `get_profile()`. NaN values are now ignored for Min, Mean, Std, and Sum, which aligns with the behavior of Pandas.
+
 ### 2019-06-10 (version 1.1.5)
 
 Bug fixes and improvements
