@@ -18,7 +18,7 @@ Here is more information on how to use the new Data Prep SDK:
 
 ## Release Notes
 
-### 2019-06-25 (version 1.1.6)
+### 2019-06-24 (version 1.1.6)
 
 New features
 - Added summary functions for top values (`SummaryFunction.TOPVALUES`) and bottom values (`SummaryFunction.BOTTOMVALUES`).
