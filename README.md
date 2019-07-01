@@ -18,6 +18,12 @@ Here is more information on how to use the new Data Prep SDK:
 
 ## Release Notes
 
+### 2019-07-01 (version 1.1.7)
+
+We reverted a change that improved performance, as it was causing issues for some customers using Azure Databricks. If you experienced an issue on Azure Databricks, you can upgrade to version 1.1.7 using one of the methods below:
+1. Run this script to upgrade: `%sh /home/ubuntu/databricks/python/bin/pip install azureml-dataprep==1.1.7`
+2. Recreate the cluster, which will install the latest Data Prep SDK version.
+
 ### 2019-06-24 (version 1.1.6)
 
 New features
