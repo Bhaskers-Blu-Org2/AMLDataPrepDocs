@@ -18,6 +18,17 @@ Here is more information on how to use the new Data Prep SDK:
 
 ## Release Notes
 
+### 2019-07-09 (version 1.1.8)
+
+New features
+- Dataflow objects can now be iterated over, producing a sequence of records. See documentation for `Dataflow.to_record_iterator`.
+
+Bug fixes and improvements
+- Increased the robustness of DataPrep SDK.
+- Improved handling of pandas DataFrames with non-string Column Indexes.
+- Improved the performance of `to_pandas_dataframe` in Datasets.
+- Fixed a bug where Spark execution of Datasets failed when run in a multi-node environment.
+
 ### 2019-07-01 (version 1.1.7)
 
 We reverted a change that improved performance, as it was causing issues for some customers using Azure Databricks. If you experienced an issue on Azure Databricks, you can upgrade to version 1.1.7 using one of the methods below:
