@@ -18,6 +18,14 @@ Here is more information on how to use the new Data Prep SDK:
 
 ## Release Notes
 
+### 2019-07-25 (version 1.1.9)
+New features
+- Added support for reading a file directly from a http or https url.
+
+Bug fixes and improvements
+- Improved error message when attempting to read a Parquet Dataset from a remote source (which is not currently supported).
+- Fixed a bug when writing to Parquet file format in ADLS Gen 2, and updating the ADLS Gen 2 container name in the path.
+
 ### 2019-07-09 (version 1.1.8)
 
 New features
