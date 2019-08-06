@@ -18,6 +18,12 @@ Here is more information on how to use the new Data Prep SDK:
 
 ## Release Notes
 
+### 2019-08-05 (version 1.1.10)
+New features
+- You can now request to execute specific inspectors (e.g. histogram, scatter plot, etc) on specific columns.
+    - See examples in how-to guide: [Inspectors notebook](./how-to-guides/inspector.ipynb)
+- Added a parallelize argument to append_columns. If True, data will be loaded into memory but execution will run in parallel; if False, execution will be streaming but single-threaded.
+
 ### 2019-07-25 (version 1.1.9)
 New features
 - Added support for reading a file directly from a http or https url.
