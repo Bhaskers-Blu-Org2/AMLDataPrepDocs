@@ -18,6 +18,14 @@ Here is more information on how to use the new Data Prep SDK:
 
 ## Release Notes
 
+### 2019-08-19 (version 1.1.12)
+New features
+- Lists of strings can now be passed in as input to `read_*` methods.
+
+Bug fixes and improvements
+- The performance of `read_parquet` has been significantly improved when running in Spark.
+- Fixed an issue where `column_type_builder` failed in case of a single column with ambiguous date formats.
+
 ### 2019-08-05 (version 1.1.10)
 New features
 - You can now request to execute specific inspectors (e.g. histogram, scatter plot, etc) on specific columns.
