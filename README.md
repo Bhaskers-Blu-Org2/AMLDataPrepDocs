@@ -18,6 +18,13 @@ Here is more information on how to use the new Data Prep SDK:
 
 ## Release Notes
 
+### 2019-08-29 (version 1.1.14)
+Bug fixes and improvements
+- Enabled writing to ADLS/ADLSGen2 using raw path and credentials.
+- Fixed a bug that caused `include_path=True` to not work for `read_parquet`.             
+- Fixed `to_pandas_dataframe()` failure caused by exception "Invalid property value: hostSecret".
+- Fixed a bug where files could not be read on DBFS in Spark mode.
+
 ### 2019-08-19 (version 1.1.12)
 New features
 - Lists of strings can now be passed in as input to `read_*` methods.
