@@ -5,8 +5,17 @@ You will find in this repo:
 - [Case Study Notebooks](case-studies/new-york-taxi) that show in-depth scenario examples of features.
 - [Getting Started Tutorial](tutorials/getting-started/getting-started.ipynb) for a quick introduction to the Data Prep SDK and some of its main features.
 
+You will find on this page:
+1. [Installation](#installation)
+1. [Documentation](#documentation)
+1. [Release Notes](#release-notes)
+1. [Known Issues](#known-issues)
+1. [Datasets License Information](#datasets-license-information)
+
 ## Installation
-Here are the [SDK installation steps](https://aka.ms/aml-data-prep-installation).
+```python
+pip install azureml-dataprep
+```
 
 ## Documentation 
 Here is more information on how to use the new Data Prep SDK:
@@ -301,7 +310,17 @@ Bug fixes
 
 ## Known Issues
 
-- **If running version 0.1.0**: To fix "Error Message: Cannot run the event loop while another loop is running", downgrade Tornado version to 4.5.3. Restart any running kernels for the change to take effect.
+### Fail to read Parquet file from HTTP or ADLS Gen 2
+
+There is a known issue in AzureML DataPrep SDK version 1.1.25 that causes a failure when reading Parquet files from HTTP or ADLS Gen 2. To fix this issue, please upgrade to a version higher than 1.1.26, or downgrade to a version lower than 1.1.24.
+
+```python
+pip install --upgrade azureml-dataprep
+```
+
+### "Cannot run the event loop while another loop is running"
+
+If running version 0.1.0: To fix "Error Message: Cannot run the event loop while another loop is running", downgrade Tornado version to 4.5.3. Restart any running kernels for the change to take effect.
 ```    
 pip install -U tornado==4.5.3
 ```
