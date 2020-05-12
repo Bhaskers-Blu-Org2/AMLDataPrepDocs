@@ -1,5 +1,8 @@
 # Azure Machine Learning Data Prep SDK
 
+Note: We will no longer be maintaining public facing release notes and notebook samples for azureml-dataprep regularly.
+
+
 You will find in this repo:
 - [How-To Guide Notebooks](how-to-guides) for more in-depth feature examples.
 - [Case Study Notebooks](case-studies/new-york-taxi) that show in-depth scenario examples of features.
