@@ -1,6 +1,6 @@
 # Azure Machine Learning Data Prep SDK
 
-Note: We will no longer be maintaining public facing release notes and notebook samples for azureml-dataprep regularly.
+> Note: We will no longer be maintaining public facing release notes and notebook samples for azureml-dataprep regularly.
 
 
 You will find in this repo:
